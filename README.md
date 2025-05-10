@@ -75,11 +75,15 @@ phonebook/
 ```bash
 docker build -t sinazeynali/phonebook-app .
 docker push sinazeynali/phonebook-app
+```bash
+
 
 ### 2. Start Minikube (Docker driver recommended)
 
 ```bash
 minikube start --driver=docker
+```bash
+
 
 ### 3. Deploy MongoDB and App to Kubernetes
 
@@ -88,11 +92,14 @@ kubectl apply -f mongo-deployment.yaml
 kubectl apply -f mongo-service.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+```bash
+
 
 ### 4. Access the App
 
 ```bash
 minikube service phonebook-service
+```bash
 
 
 ## ⚖️ Scaling & Monitoring
@@ -101,11 +108,14 @@ minikube service phonebook-service
 
 ```bash
 kubectl scale deployment phonebook-app --replicas=3
+```bash
+
 
 ### Autoscaling (HPA):
 
 ```bash
 kubectl autoscale deployment phonebook-app --cpu-percent=50 --min=2 --max=5
+```bash
 
 
 Liveness & Readiness probes added to deployment.yaml using a /health endpoint.
