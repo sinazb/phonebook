@@ -32,20 +32,35 @@ A simple Phonebook web application built with Flask and MongoDB, containerized w
 
 phonebook/
 ├── app.py # Flask backend
+
 ├── requirements.txt
+
 ├── Dockerfile
+
 ├── templates/
+
 │ ├── login.html
+
 │ ├── register.html
+
 │ └── dashboard.html
+
 ├── static/
+
 │ └── style.css
+
 ├── deployment.yaml # Kubernetes deployment for app
+
 ├── service.yaml # Kubernetes service for app
+
 ├── mongo-deployment.yaml # MongoDB deployment
+
 ├── mongo-service.yaml # MongoDB service
+
 └── .github/
+
 └── workflows/
+
 └── deploy.yml # GitHub Actions CI/CD
 
 
